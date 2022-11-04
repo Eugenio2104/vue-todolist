@@ -14,13 +14,14 @@ createApp({
   data(){
     return{
       logoImg: 'img/logo.png',
+      errorString:'',
       tasks:[
         {
-          text: 'fare la cena',
+          text: 'fare palestra',
           done: true
         },
         {
-          text: 'fare palestra',
+          text: 'fare la cena',
           done: true
         },
         {
@@ -33,6 +34,14 @@ createApp({
   methods:{
     toggleDone(index){
       this.tasks[index].done = !this.tasks[index].done;
+    },
+    removeTask(index){
+      this.errorString = '';
+      if(this.tasks[index].done){
+        this.tasks.splice(index,1);
+      }else{
+        this.errorString = 'Te piacerebbe! finisci tutto e poi puoi andà a dormì'
+      }
     }
   },
   mounted(){

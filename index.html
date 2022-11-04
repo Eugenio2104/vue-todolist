@@ -19,6 +19,7 @@
     <div class="input-area">
       <input type="text" placeholder="New task">
       <button>Aggiungi Task</button>
+      <p class="error">{{errorString}}}</p>
     </div>
     <div class="task-area">
       <ul>
@@ -27,8 +28,10 @@
         :class="{'done': task.done}"
         @click="toggleDone(index)"
         class="task">
-          <span>fare la cena</span>
-          <i class="fa-solid fa-xmark"></i>
+          <span>{{task.text}}</span>
+          <i 
+          @click.stop="removeTask(index)"
+          class="fa-solid fa-xmark"></i>
         </li>
       </ul>
       <!-- <h3>Non ci sono task :)</h3> -->
