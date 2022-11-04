@@ -30,6 +30,11 @@ createApp({
       ]
     }
   },
+  methods:{
+    toggleDone(index){
+      this.tasks[index].done = !this.tasks[index].done;
+    }
+  },
   mounted(){
     console.log('montata');
   }

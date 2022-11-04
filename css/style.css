@@ -55,6 +55,7 @@
 
 .task.done span{
   text-decoration: line-through;
+  color: red;
 }
 
 .error{

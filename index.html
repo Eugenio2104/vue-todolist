@@ -25,6 +25,7 @@
         <li  
         v-for="(task, index) in tasks"
         :class="{'done': task.done}"
+        @click="toggleDone(index)"
         class="task">
           <span>fare la cena</span>
           <i class="fa-solid fa-xmark"></i>
