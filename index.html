@@ -17,7 +17,7 @@
       <img :src="logoImg" alt="">
     </div>
     <div class="input-area">
-      <input type="text" placeholder="New task"
+      <input type="text" placeholder="Nuovo impegno"
       v-model.trim="newMessageString">
       <button @click="createTask()">Aggiungi Task</button>
       <p class="error">{{errorString}}</p>

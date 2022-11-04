@@ -19,17 +19,10 @@ createApp({
       newMessageString:'',
       tasks:[
         {
-          text: 'fare palestra',
+          text: 'Alzati dal letto e scrivi i tuoi impegni della giornata',
           done: false
         },
-        {
-          text: 'fare la cena',
-          done: false
-        },
-        {
-          text: 'fare la lavatrice',
-          done: false
-        },
+        
       ]
     }
   },
