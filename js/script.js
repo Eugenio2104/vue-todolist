@@ -15,14 +15,15 @@ createApp({
     return{
       logoImg: 'img/logo.png',
       errorString:'',
+      newMessageString:'',
       tasks:[
         {
           text: 'fare palestra',
-          done: true
+          done: false
         },
         {
           text: 'fare la cena',
-          done: true
+          done: false
         },
         {
           text: 'fare la lavatrice',
@@ -41,6 +42,19 @@ createApp({
         this.tasks.splice(index,1);
       }else{
         this.errorString = 'Te piacerebbe! finisci tutto e poi puoi andà a dormì'
+      }
+    },
+    //creare nuove task
+    createTask(){
+      if(this.newMessageString.length < 5){
+        this.errorString = 'devi scrivere almeno 5 caratteri'
+      }else{
+        const newTask = {
+          text: this.newMessageString,
+          done: false
+        }
+        this.tasks.unshift(newTask);
+        this.newMessageString = '';
       }
     }
   },

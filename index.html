@@ -17,8 +17,9 @@
       <img :src="logoImg" alt="">
     </div>
     <div class="input-area">
-      <input type="text" placeholder="New task">
-      <button>Aggiungi Task</button>
+      <input type="text" placeholder="New task"
+      v-model="newMessageString">
+      <button @click="createTask()">Aggiungi Task</button>
       <p class="error">{{errorString}}}</p>
     </div>
     <div class="task-area">
