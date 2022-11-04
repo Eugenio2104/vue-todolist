@@ -14,6 +14,7 @@ createApp({
   data(){
     return{
       logoImg: 'img/logo.png',
+      fonzieImg: 'https://cdn.gelestatic.it/kataweb/tvzap/2013/07/00181.jpg',
       errorString:'',
       newMessageString:'',
       tasks:[

@@ -60,8 +60,20 @@
 
 .error{
   color: red;
+  font-size: 3rem;
+  margin-top: 20px;
 }
 
 button{
   cursor: pointer;
+}
+
+
+.container-fonzie{
+  display: flex;
+  justify-content: center;
+}
+.fonzie{
+  width: 200px;
+  
 }
